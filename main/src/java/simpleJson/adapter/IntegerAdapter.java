@@ -6,10 +6,6 @@ package simpleJson.adapter;
 
 public class IntegerAdapter implements TypeAdapter {
 
-    public IntegerAdapter(){
-
-    }
-
     @Override
     public Object read(String jsonIn, Class klass) throws Exception {
         return Integer.valueOf(jsonIn);
@@ -19,14 +15,6 @@ public class IntegerAdapter implements TypeAdapter {
     public String write(Object object) {
         return String.valueOf((Integer)object);
     }
-
-//    @Override
-//    public boolean isSuitable(Class klass) {
-//        if (klass == Integer.TYPE){
-//            return true;
-//        }
-//        return false;
-//    }
 
     @Override
     public boolean isSuitable(Object object){

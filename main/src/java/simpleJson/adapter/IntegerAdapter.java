@@ -30,10 +30,7 @@ public class IntegerAdapter implements TypeAdapter {
 
     @Override
     public boolean isSuitable(Object object){
-        if (object instanceof Integer){
-            return true;
-        }
-        return false;
+        return isSuitableByClass(object.getClass());
     }
 
     @Override
